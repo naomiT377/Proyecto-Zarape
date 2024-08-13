@@ -1,0 +1,29 @@
+[
+    {
+        "numeroUnico": "001",
+        "nombreCombo": "Combo Familiar",
+        "foto": "ruta/a/imagen_familiar.jpg",
+        "categoria": "Principal",
+        "descripcion": "Incluye una pizza grande, 2 refrescos y una ensalada.",
+        "elementos": "Pizza grande, 2 refrescos, ensalada",
+        "precio": "$25.00"
+    },
+    {
+        "numeroUnico": "002",
+        "nombreCombo": "Combo Veggie",
+        "foto": "ruta/a/imagen_veggie.jpg",
+        "categoria": "Vegetariano",
+        "descripcion": "Ensalada mixta, hamburguesa vegetariana y batido.",
+        "elementos": "Ensalada mixta, hamburguesa vegetariana, batido",
+        "precio": "$18.00"
+    },
+    {
+        "numeroUnico": "003",
+        "nombreCombo": "Combo Deluxe",
+        "foto": "ruta/a/imagen_deluxe.jpg",
+        "categoria": "Deluxe",
+        "descripcion": "Incluye una pizza especial, 3 refrescos y postre.",
+        "elementos": "Pizza especial, 3 refrescos, postre",
+        "precio": "$35.00"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "nombre": "Huevos Tirados", 
+        "categoria": "Alimento", 
+        "descripcion": "Huevo revuelto con frijoles", 
+        "estatus": "Activo",
+        "imagen": "../Recursos/Huevos.jpg",
+        "precio": "$160.00"
+    },
+    {
+        "id": "2",
+        "nombre": "Chilaquiles", 
+        "categoria": "Alimento ", 
+        "descripcion": "Totopos (trozos de tortilla de maíz fritos) bañados en salsa verde o roja, acompañados de crema, queso, cebolla, y a veces pollo o huevo.", 
+        "estatus": "Activo",
+        "imagen": "../Recursos/chilaquiles.webp",
+        "precio": "$175.00"
+    },
+    {
+        "id": "3",
+        "nombre": "Molletes", 
+        "categoria": "Alimento", 
+        "descripcion": "Pan bolillo partido a la mitad, untado con frijoles refritos y cubierto con queso y, a veces, chorizo o pico de gallo. Se gratinan en el horno.", 
+        "estatus": "Activo",
+        "imagen": "../Recursos/molletes.jpg" ,
+        "precio": "$140.00"
+    },
+    {
+        "id": "4",
+        "nombre": "Birria", 
+        "categoria": "Alimento", 
+        "descripcion": "​​​​​​ La carne se marina en un adobo hecho de vinagre, chiles secos, ajos, hierbas, y sal. ", 
+        "estatus": "Activo",
+        "imagen": "../Recursos/birria.webp",
+        "precio": "$35.00 c/u"
+    }
+]

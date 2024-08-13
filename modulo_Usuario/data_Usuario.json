@@ -1,0 +1,17 @@
+[
+    {
+        "numero_unico_Usuario": "1",
+        "nombre_Usuario": "Naomi Teran",
+        "Contraseña": "naomi123"
+    },
+    {
+        "numero_unico_Usuario": "2",
+        "nombre_Usuario": "Mayra Hernandez",
+        "Contraseña": "mayH123"
+    },
+    {
+        "numero_unico_Usuario": "3",
+        "nombre_Usuario": "Yaneth Cruz",
+        "Contraseña": "yanethC123"
+    }
+]

@@ -1,0 +1,171 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente como Arial o una fuente sans-serif */
+    background-color: #FEF2E4; /* Color de fondo suave */
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 1000px; /* Limita el ancho máximo a 1000 píxeles */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Padding interno de 20 píxeles */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: #C60000; /* Color de fondo rojo */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Padding interno de 10 píxeles */
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    border-top-left-radius: 8px; /* Redondea la esquina superior izquierda */
+    border-top-right-radius: 8px; /* Redondea la esquina superior derecha */
+}
+
+.header img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+}
+
+.header h1 {
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+.header button {
+    background-color: #d32f2f; /* Color de fondo rojo */
+    border: none; /* Sin borde */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Padding interno de 10 píxeles */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-right: 10px; /* Espacio a la derecha */
+}
+
+.header button:hover {
+    background-color: #b71c1c; /* Cambia el color de fondo al pasar por encima */
+}
+
+/* Estilos para los formularios */
+.form-container {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    padding: 20px; /* Padding interno de 20 píxeles */
+}
+
+.form-container div {
+    margin-bottom: 15px; /* Espacio inferior de 15 píxeles entre los elementos */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    padding: 10px; /* Padding interno de 10 píxeles */
+    margin-top: 10px; /* Espacio superior de 10 píxeles */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.form-container textarea {
+    resize: none; /* Desactiva la posibilidad de redimensionar el textarea */
+    height: 100px; /* Altura fija de 100 píxeles */
+}
+
+.form-container button {
+    background-color: #FA812F; /* Color de fondo naranja */
+    border: none; /* Sin borde */
+    color: white; /* Color de texto blanco */
+    padding: 10px; /* Padding interno de 10 píxeles */
+    margin-top: 10px; /* Espacio superior de 10 píxeles */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.form-container button:hover {
+    background-color: #e65100; /* Cambia el color de fondo al pasar por encima */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor */
+    padding: 10px; /* Padding interno de 10 píxeles */
+}
+
+/* Estilos para la tabla */
+.table-container {
+    margin-top: 20px; /* Espacio superior de 20 píxeles */
+}
+
+table {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Borde gris claro para la tabla, cabeceras y celdas */
+}
+
+th, td {
+    padding: 12px; /* Padding interno de 12 píxeles en las cabeceras y celdas */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+th {
+    background-color: #C60000; /* Fondo para las cabeceras */
+    color: white;
+    
+}
+
+/* Estilos para los tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Indica que el elemento es interactivo */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px; /* Ajusta el ancho */
+    background-color: #b71c1c; /* Color de fondo del tooltip */
+    color: #fff; /* Color del texto en el tooltip */
+    text-align: center;
+    border-radius: 5px; /* Bordes redondeados del tooltip */
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Ajusta la posición vertical del tooltip */
+    left: 50%;
+    margin-left: -100px; /* Ajusta el centro del tooltip horizontalmente */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip img {
+    width: 250px; /* Ajusta el tamaño de la imagen en el tooltip */
+    height: auto;
+}
+
+
+.custom-navbar {
+    background-color: #C60000;
+    color: white; /* Opcional: Para que el texto sea blanco y contraste con el fondo */
+}
+
+
+
+
+

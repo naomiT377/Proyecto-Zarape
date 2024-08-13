@@ -1,0 +1,39 @@
+[
+    {
+        "id": "1",
+        "nombre": "Agua de Jamaica",
+        "categoria": "Bebida",
+        "descripcion": "Elaborada con hojas de flores de hibisco, su sabor único",
+        "estatus": "Activo",
+        "imagen": "../../recursos/Agua de jamaica.jpeg",
+        "precio": "$80.00"
+    },
+    {
+        "id": "2",
+        "nombre": "Smoothie de Frutas",
+        "categoria": "Bebida",
+        "descripcion": "Plátano, fresas, yogur griego, leche (puede ser normal o vegetal) y un poco de miel o agave.",
+        "estatus": "Activo",
+        "imagen": "../../recursos/Smoothie de Frutas.jpg",
+        "precio": "$120.00"
+    },
+    {
+        "id": "3",
+        "nombre": "Café con Leche",
+        "categoria": "Bebida",
+        "descripcion": "Café espresso o fuerte, leche (puede ser de vaca o vegetal), y azúcar al gusto.",
+        "estatus": "Activo",
+        "imagen": "../../recursos/cafe.jpeg",
+        "precio": "$40.00"
+    },
+    {
+        "id": "4",
+        "nombre": "Jugo de Naranja Natural",
+        "categoria": "Bebida",
+        "descripcion": "​Naranjas frescas",
+        "estatus": "Activo",
+        "imagen": "../../recursos/jugo de naranja.webp",
+        "precio": "$60.00"
+    }
+    ]
+

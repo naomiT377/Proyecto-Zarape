@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestión de combos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Elaboración del proyecto integrador">
+        <meta name="keywords" content="El Zarape">
+        <meta name="author" content="Soft DM">
+        <link href="../Style/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../Style/css/Mycss2.css" rel="stylesheet" type="text/css"/>
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+         <link href="combo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+             <nav class="navbar navbar-expand-sm  mb-3 fixed-top custom-navbar ">
+                <img src="../Recursos/Logotipo.jpeg" alt="100" width="100"/>
+                <div class="container-fluid">
+                    <h3>Restaurante El Zarape</h3>
+                </div> 
+                
+                <div>
+                    <a  class="btn btn-outline-light" href="../index.html" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5
+                          1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg> Cerrar sesion </a>
+                </div>
+            </nav> 
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <section class="dropdown">
+                <button>Modulos</button>
+                <div class="dropdown-options">
+                  <a href="../modulo_Sucursal/view_Sucursal.html">Sucursales</a>
+                  <a href="../modulo_Usuario/view_Usuario.html">Usuarios</a>
+                   <a href="../moduloCatalagoAlimento/view_Alimento.html">Alimentos</a>
+                  <a href="../moduloCatalagoBebida/view_Bebida.html">Bebidas</a>
+
+                  <a href="../modulo_Combo/view_Combo.html">Combos</a>
+                </div>
+            </section>
+
+                <center>
+                <div class="card col-lg-6 m-2">
+                    <h2 class="text-center">Gestión de combo</h2>
+                    <div class="row g-2">
+                        <center>
+                        <div class="col-md-5">
+                            <label for="txtNumUnico" class="mt-2 ">Número único de usuario</label>
+                            <input id="txtNumUnico" type="text" class="mt-2">
+                            
+                            <label for="txtNomCombo" class="mt-2">Nombre combo:</label>
+                            <input id="txtNomCombo" type="text" class="mt-2">
+                            
+                           <label for="txtFoto" class="form-label">Foto del combo:</label>
+                            <input id="txtFoto" type="file" name="foto" accept="image/*" required>
+
+                            <label for="txtCategoria" class="mt-2">Categoria:</label>
+                            <select id="txtCategoria" class="mt-2 form-control">
+                                <option value="">Seleccione una categoría</option>
+                                <option value="Entrada">Entrada</option>
+                                <option value="Plato fuerte">Plato fuerte</option>
+                                <option value="Bebidas">Bebidas</option>
+                                <option value="Postres">Postres</option>
+                            </select>
+                            
+                             <label for="txtDescripcion" class="mt-2">Descripcion:</label>
+                            <input id="txtDescripcion" type="text" class="mt-2">
+                            
+                            <label for="txtElementos" class="mt-2">Elementos complementarios:</label>
+                            <input id="txtElementos" type="text" class="mt-2">
+                            <br>
+                            <label for="txtPrecio" class="mt-2">Precio:</label>
+                            <br>
+                            <input id="txtPrecio" type="number" class="mt-2" min="0" step="0.01">
+                            
+                        </div>
+                        </center>
+                    </div>
+
+                    <div>
+                        <button class="mt-2 btn btn-success btn-lg" onclick="addCombo();" id="btnAdd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy2-fill" viewBox="0 0 16 16">
+                            <path d="M12 2h-2v3h2z"/>
+                            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v13A1.5 1.5 0 0 0 1.5 16h13a1.5 1.5 0 0 0 1.5-1.5V2.914a1.5 1.5 0 0 0-.44-1.06L14.147.439A1.5 1.5 0 0 0 13.086 0zM4 6a1 1 0 0 1-1-1V1h10v4a1 1 0 0 1-1 1zM3 9h10a1 1 0 0 1 1 1v5H2v-5a1 1 0 0 1 1-1"/>
+                        </svg> Registrar</button>
+                        
+                        <button class="mt-2 btn btn-info btn-lg" onclick="clean();" id="btnClean">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
+                            <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
+                        </svg> Limpiar</button>
+                    </div>
+                </div>
+                </center>
+             <div class="container-fluid row" style="margin-top: 50px;">
+                <div class="d-flex m-3 align-items-center justify-content-end">
+                    
+                    <label for="txtBusquedaUsuario" class="form-label mx-3"><strong>Buscar Combo:</strong></label>
+                    <input type="text" id="txtBusquedaUsuario">
+                    <button class="btn btn-primary mx-2" onclick="searchUsuario();">Buscar</button>
+                </div>
+            </div>
+
+            <center>
+                <div class="card col-lg-10 p-2 m-2" style="overflow-x: auto;">
+                    <div>
+                        <button class="mt-2 btn btn-warning btn-lg disabled" onclick="updateCombo();" id="btnUpdate">Actualizar</button>
+                        <button class="mt-2 btn btn-danger btn-lg disabled" onclick="deleteCombo();" id="btnDelete">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                            </svg> Eliminar</button>
+                    </div>
+                    <table class="table table-hover">
+                        <thead class="table-danger">
+                                        <tr>
+                                            <th>Número Único</th>
+                                            <th>Nombre Combo</th>
+                                            <th>Imagen</th>
+                                            <th>Categoria</th>
+                                            <th>Descripción</th>
+                                            <th>Elementos Complementarios</th>
+                                            <th>Precio</th>
+                                        </tr>
+
+                        </thead>
+                        <tbody id="tblUsuario">
+                        </tbody>
+                    </table>
+                </div>
+            </center>
+        </div>
+        <script src="controller_Combo.js" type="text/javascript"></script>
+        <script src="../Style/js/bootstrap.bundle.js" type="text/javascript"></script>
+    </body>
+</html>

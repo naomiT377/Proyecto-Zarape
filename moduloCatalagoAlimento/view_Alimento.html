@@ -1,0 +1,155 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Alimentos</title>
+    <meta name="description" content="Elaboración del proyecto integrador">
+        <meta name="keywords" content="El Zarape">
+        <meta name="author" content="Soft DM">
+        <link href="../Style/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../Style/css/Mycss2.css" rel="stylesheet" type="text/css"/>
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+         <link href="alimento.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm danger mb-3 fixed-top custom-navbar">
+                <img src="../Recursos/Logotipo.jpeg" alt="100" width="100"/>
+                <div class="container-fluid">
+                    <h3>Restaurante El Zarape</h3>
+                </div> 
+                
+                <div>
+                    <a  class="btn btn-outline-light" href="../index.html" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5
+                          1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg> Cerrar sesion </a>
+                </div>
+            </nav> 
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <section class="dropdown">
+                <button>Modulos</button>
+                <div class="dropdown-options">
+                  <a href="../modulo_Sucursal/view_Sucursal.html">Sucursales</a>
+                   <a href="../modulo_Usuario/view_Usuario.html">Usuarios</a>
+                 <a href="../moduloCatalagoAlimento/view_Alimento.html">Alimentos</a>
+                 <a href="../moduloCatalagoBebida/view_Bebida.html">Bebidas</a>
+                  <a href="../modulo_Combo/view_Combo.html">Combos</a>
+                </div>
+            </section>
+                <center>
+                                       
+                        </center>
+                <center>
+            <button onclick="showForm('add')">Agregar alimento</button>
+            <button onclick="showForm('delete')">Eliminar alimento</button>
+            <button onclick="showForm('search')">Buscar alimentos</button>
+            <button onclick="showForm('update')">Modificar alimento</button></center>
+                    
+        <div id="form-container" class="form-container">
+            <!-- Formulario para agregar alimentos -->
+            <form id="add-form" style="display: none;">
+                <center>
+                <div class="col-md-5">
+                    
+                    <label for="add-id">ID</label>
+                    <input type="text" readonly id="add-id" name="id">
+                
+                
+                    <label for="add-nombre">Nombre</label>
+                    <input type="text" id="add-nombre" name="nombre">
+                
+                
+                    <select id="txtCategoria" class="mt-2 form-control">
+                                <option value="">Seleccione una categoría</option>
+                                <option value="Entrada">Entrada</option>
+                                <option value="Plato fuerte">Plato fuerte</option>
+                                <option value="Bebidas">Bebidas</option>
+                                <option value="Postres">Postres</option>
+                            </select>
+                
+                    <label for="add-descripcion">Descripción</label>
+                    <textarea id="add-descripcion" name="descripcion"></textarea>
+                </div>
+                   
+                <button type="button" id="btnAddAlimento">Agregar</button>
+                 </center>
+                
+            </form>
+            <!-- Formulario para elimin</div>ar alimentos -->
+            <center>
+            <form id="delete-form" style="display: none;">
+                <div class="col-md-5">
+                    <label for="delete-id">ID</label>
+                    <input type="text"  id="delete-id" name="id" >
+                </div>
+                <button type="button" onclick="deleteAlimento()">Eliminar</button>
+            </form>
+                </center>
+            <!-- Formulario para buscar alimentos -->
+            <center>
+            <form id="search-form" style="display: none;">
+                <div  class="col-md-5">
+                    <label for="search-id">ID</label>
+                    <input type="text" id="search-id" name="id">
+                </div>
+                <button type="button" onclick="searchAlimento()">Buscar</button>
+            </form>
+                </center>
+            
+            <!-- Formulario para modificar alimentos -->
+            <center>
+            <form id="update-form" style="display: none;">
+                <div class="col-md-5">
+                    <label for="update-id">ID</label>
+                    <input type="text" id="update-id" name="id">
+                
+                
+                    <label for="update-nombre">Nombre</label>
+                    <input type="text" id="update-nombre" name="nombre">
+               
+                    <label for="update-categoria">Categoría</label>
+                    <input type="text" id="update-categoria" name="categoria">
+
+                    <label for="update-descripcion">Descripción</label>
+                    <textarea id="update-descripcion" name="descripcion"></textarea>
+                </div>
+                <button type="button" onclick="updateAlimento()">Modificar</button>
+            </form>
+                </center>
+        </div>
+    <center>
+        <div class="col-md-5" class="table-container" >
+            <table id="alimentos-table" class="table table-hover">
+                        <thead class="table-danger">
+                   
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Descripción</th>
+                        <th>Estatus</th>
+                        
+                    </tr>
+                       
+                </thead>
+       
+                <tbody>
+                    <!-- Las filas se generan dinámicamente en el JavaScript -->
+                </tbody>
+             </table>
+        </div>
+    </center>
+    </div>
+    <script src="controller_Alimento.js" type="text/javascript"></script>
+</body>
+</html>
+
